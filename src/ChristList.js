@@ -17,7 +17,7 @@ export const ChristList = () => {
                     data[key].fbid = key;
                     return data[key];
                 });
-
+                console.log("newArray", newArray)
                 setJournalArray(newArray)
             })
     }, [])

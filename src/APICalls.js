@@ -6,11 +6,6 @@ export const getAll = () => {
 
 }
 
-const testItem = {
-    "title": "This is a Test",
-    "fbid": "-MNiZJwayQ05wqzOmygb"
-}
-
 export const createChristList = (listObj) => {
     return fetch(`${dataURL}/journalList.json`, {
         method: "POST",
@@ -30,7 +25,7 @@ export const updateChristList = (listObj) => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(listObj)
+        body: JSON.stringify(updateObj)
     })
 }
 
@@ -40,6 +35,3 @@ export const deleteChristList = (listObj) => {
     })
 }
 
-// updateChristList(testItem);
-//createChristList(testItem)
-deleteChristList(testItem)
