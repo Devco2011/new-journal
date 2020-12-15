@@ -1,12 +1,22 @@
-import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { ChristList } from "./ChristList"
+import React from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
+import ApplicationViews from "./components/ApplicationViews";
+import { Header } from "./components/Header";
+import { FirebaseProvider } from "./components/fbAuth/FirebaseProvider";
+
 
 function App() {
-  return (
 
+  return (
     <div className="App">
-      <ChristList />
+      <h1>New Journal</h1>
+      <Router>
+        <FirebaseProvider>
+          <Header />
+          <ApplicationViews />
+        </FirebaseProvider>
+      </Router>
+
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { getAll } from './APICalls';
+import { getAll } from '../modules/APICalls';
 
 export const ChristList = () => {
 
